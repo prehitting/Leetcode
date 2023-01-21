@@ -1,4 +1,10 @@
-package com.prehitting.leetcode;
+package com.prehitting.solutions.leetcode;
+
+import com.prehitting.annotation.Answer;
+import com.prehitting.annotation.Question;
+import com.prehitting.enums.Level;
+import com.prehitting.enums.Type;
+import com.prehitting.enums.Version;
 
 /**
  * Leetcode 2299 简单
@@ -12,8 +18,10 @@ package com.prehitting.leetcode;
  * 它 不 包含 2 个连续相同的字符（比方说 "aab" 不符合该条件，但是 "aba" 符合该条件）。
  * 给你一个字符串 password ，如果它是一个 强 密码，返回 true，否则返回 false 。
  */
+@Question(title = "是否为强密码", tags = Type.Mock, level = Level.SIMPLE)
 class Solution2299 {
 
+    @Answer(version = Version.Only)
     public boolean strongPasswordCheckerII(String password) {
         if (password.length() < 8) return false;
         boolean[] v = new boolean[127];

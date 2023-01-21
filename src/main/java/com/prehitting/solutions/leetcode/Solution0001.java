@@ -1,4 +1,10 @@
-package com.prehitting.leetcode;
+package com.prehitting.solutions.leetcode;
+
+import com.prehitting.annotation.Answer;
+import com.prehitting.annotation.Question;
+import com.prehitting.enums.Level;
+import com.prehitting.enums.Type;
+import com.prehitting.enums.Version;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,12 +14,11 @@ import java.util.Map;
  * 你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
  * 你可以按任意顺序返回答案。
  */
+@Question(title = "两数之和", tags = Type.Hash, level = Level.SIMPLE)
 public class Solution0001 {
 
-    /**
-     * version 1.0
-     */
 
+    @Answer(desc = "双层for循环查找", version = Version.First)
     public int[] twoSum_v1(int[] nums, int target) {
         int len = nums.length;
         if (len < 2)
@@ -21,16 +26,15 @@ public class Solution0001 {
         for (int i = 0; i < len; i++) {
             for (int j = i + 1; j < len; j++) {
                 if (nums[i] + nums[j] == target) {
-                    return new int[] { i, j };
+                    return new int[]{i, j};
                 }
             }
         }
         return new int[2];
     }
 
-    /**
-     * version 2.0
-     */
+
+    @Answer(desc = "使用map缓存", version = Version.Second)
     public static int[] twoSum_v2(int[] nums, int target) {
         int len = nums.length;
         if (len < 2)
@@ -39,7 +43,7 @@ public class Solution0001 {
         for (int i = 0; i < len; i++) {
             int j = map.getOrDefault(target - nums[i], -1);
             if (j != -1) {
-                return new int[] { i, j };
+                return new int[]{i, j};
             } else {
                 map.put(nums[i], i);
             }
