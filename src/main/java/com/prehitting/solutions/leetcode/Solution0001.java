@@ -8,6 +8,8 @@ import com.prehitting.enums.Version;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。
@@ -49,6 +51,18 @@ public class Solution0001 {
             }
         }
         return new int[2];
+    }
+
+    public static void main(String[] args) {
+        String s = "abc", t = "";
+        StringBuilder str = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            str.append("*").append(c);
+        }
+        s = str.append("*").toString();
+        Pattern pattern = Pattern.compile(s);
+        Matcher matcher = pattern.matcher(t);
+        System.out.println(matcher.matches());
     }
 
 }

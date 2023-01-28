@@ -18,7 +18,9 @@ public enum Type {
 
     DoublePointer("双指针"),
 
-    BinarySearch("二分查找");
+    BinarySearch("二分查找"),
+
+    Recursion("递归");
 
     final String name;
 

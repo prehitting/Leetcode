@@ -1,5 +1,6 @@
 package com.prehitting.annotation;
 
+import com.prehitting.enums.Type;
 import com.prehitting.enums.Version;
 
 import java.lang.annotation.*;
@@ -13,5 +14,6 @@ public @interface Answer {
 
     Version version() default Version.Only;
 
+    Type type() default Type.None;
 
 }

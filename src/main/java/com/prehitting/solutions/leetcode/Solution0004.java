@@ -3,6 +3,7 @@ package com.prehitting.solutions.leetcode;
 import com.prehitting.annotation.Answer;
 import com.prehitting.annotation.Question;
 import com.prehitting.enums.Level;
+import com.prehitting.enums.Type;
 import com.prehitting.enums.Version;
 
 /**
@@ -11,7 +12,7 @@ import com.prehitting.enums.Version;
  * @Author 24809
  * @Date 2023-01-20 23:40
  */
-@Question(title = "寻找两个正序数组的中位数", tags = {}, level = Level.HARD)
+@Question(title = "寻找两个正序数组的中位数", tags = {Type.Mock}, level = Level.HARD)
 public class Solution0004 {
 
     @Answer(desc = "将两个数组暴力归并后取中间值", version = Version.First)
