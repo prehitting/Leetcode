@@ -46,7 +46,7 @@ public class Solution_Round126_DIV2_C {
         int ct1 = 0, ct2 = 0;
         for (int i = 0; i < n; i++) {
             ct1 += (targetHeight - heights[i]) % 2;//所需 1 的个数
-            ct2 += (targetHeight - heights[i]) / 2;//2 的个数
+            ct2 += (targetHeight - heights[i])  / 2;//2 的个数
         }
         int tmp = ct2 - ct1;
         if (tmp >= 2) {//如果差值过多
@@ -63,4 +63,5 @@ public class Solution_Round126_DIV2_C {
     private static int max(int a, int b) {
         return Math.max(a, b);
     }
+
 }

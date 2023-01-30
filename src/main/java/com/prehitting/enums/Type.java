@@ -20,7 +20,12 @@ public enum Type {
 
     BinarySearch("二分查找"),
 
-    Recursion("递归");
+    Recursion("递归"),
+
+    GRAPH("图论"),
+
+    DYEING("染色法");
+
 
     final String name;
 
